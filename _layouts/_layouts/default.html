@@ -8,6 +8,7 @@
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+      background: #fff;
     }
 
     /* 導覽列 */
@@ -23,15 +24,18 @@
       z-index: 1000;
     }
 
-    .nav-left {
-      font-weight: 600;
+    .nav-left a {
       font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      color: black;
     }
 
     .nav-right a {
       margin-left: 20px;
       text-decoration: none;
-      color: #333;
+      color: #555;
+      font-size: 15px;
     }
 
     .nav-right a:hover {
@@ -47,11 +51,10 @@
 
 <body>
 
+  <!-- 導覽列 -->
   <div class="navbar">
     <div class="nav-left">
-      <a href="/" style="text-decoration:none;color:black;">
-        Chun
-      </a>
+      <a href="/">Chun</a>
     </div>
 
     <div class="nav-right">
@@ -61,6 +64,7 @@
     </div>
   </div>
 
+  <!-- 內容 -->
   <div class="content">
     {{ content }}
   </div>
