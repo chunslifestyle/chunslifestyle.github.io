@@ -2,6 +2,7 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
   <style>
     /* 全站字體改成新細明體 */
@@ -11,31 +12,48 @@
       padding: 0;
       background: #fff;
       color: #333;
+      line-height: 1.6;
     }
 
     /* 導覽列 */
     .nav {
       display: flex;
       justify-content: space-between;
-      padding: 15px 30px;
+      align-items: center;
+      padding: 15px 20px;
       border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 100;
     }
     .nav a {
-      margin-left: 20px;
+      margin-left: 15px;
       text-decoration: none;
       color: #333;
+    }
+
+    /* 漢堡選單 */
+    .nav-toggle {
+      display: none;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
     }
 
     /* 內容容器 */
     .container {
       max-width: 700px;
-      margin: 50px auto;
+      margin: 40px auto;
       padding: 0 15px;
     }
 
     /* 文章列表 */
     .post-item {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       padding-bottom: 15px;
       border-bottom: 1px solid #eee;
     }
@@ -45,6 +63,7 @@
       font-weight: bold;
       display: block;
       margin: 5px 0;
+      word-break: break-word;
     }
     .post-date {
       font-size: 0.85em;
@@ -53,11 +72,34 @@
 
     /* 標籤 */
     .tags a {
-      margin-right: 10px;
+      margin-right: 8px;
       text-decoration: none;
       color: #555;
-      font-size: 0.9em;
+      font-size: 0.85em;
     }
+
+    /* 響應式 */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        border: 1px solid #eee;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      .nav-links a {
+        margin: 10px 0;
+        padding: 10px 20px;
+      }
+      .nav-toggle {
+        display: block;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -65,7 +107,8 @@
   <!-- 導覽列 -->
   <div class="nav">
     <div><a href="/">Chun</a></div>
-    <div>
+    <div class="nav-toggle" onclick="toggleNav()">☰</div>
+    <div class="nav-links">
       <a href="/">首頁</a>
       <a href="/about.html">關於我</a>
       <a href="/search.html">搜尋</a>
@@ -76,6 +119,17 @@
   <div class="container">
     {{ content }}
   </div>
+
+  <script>
+    function toggleNav() {
+      const links = document.querySelector('.nav-links');
+      if (links.style.display === 'flex') {
+        links.style.display = 'none';
+      } else {
+        links.style.display = 'flex';
+      }
+    }
+  </script>
 
 </body>
 </html>
