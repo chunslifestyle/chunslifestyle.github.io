@@ -1,0 +1,33 @@
+body,h1,h2,h3,p,a,li {
+  font-family:'Noto Serif TC',"PMingLiU","MingLiU","Microsoft JhengHei",sans-serif;
+  margin:0; padding:0; color:#333; line-height:1.6;
+}
+
+.nav {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:15px 20px; border-bottom:1px solid #eee;
+  background:#fff; position:sticky; top:0; z-index:100;
+}
+
+.nav a { margin-left:15px; text-decoration:none; color:#333; }
+.nav-toggle { display:none; font-size:1.5em; cursor:pointer; }
+.nav-links { display:flex; align-items:center; }
+
+.container { max-width:700px; margin:40px auto; padding:0 15px; }
+.post-item { margin-bottom:25px; padding-bottom:15px; border-bottom:1px solid #eee; }
+a.article-link {
+  display:block; margin:5px 0; text-decoration:none;
+  color:#007acc; font-weight:bold; word-break:break-word;
+}
+.post-date { font-size:0.85em; color:#999; }
+.tags a { margin-right:8px; text-decoration:none; color:#555; font-size:0.85em; }
+
+@media(max-width:768px){
+  .nav-links {
+    display:none; flex-direction:column; background:#fff;
+    position:absolute; top:60px; right:0; width:200px;
+    border:1px solid #eee; box-shadow:0 2px 5px rgba(0,0,0,.1);
+  }
+  .nav-links a { margin:10px 0; padding:10px 20px; }
+  .nav-toggle { display:block; }
+}
