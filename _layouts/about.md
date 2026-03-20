@@ -20,5 +20,5 @@ title: 關於我
   </ul>
 
   <h2>聯絡我</h2>
-  <p>Email: your@email.com</p>
+  <p>Email: mouchunwei@email.com</p>
 </div>
