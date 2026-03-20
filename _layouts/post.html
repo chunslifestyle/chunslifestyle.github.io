@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<style>
+.article {
+  max-width: 700px;
+  margin: 60px auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  line-height: 1.8;
+}
+
+.article h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.meta {
+  color: #888;
+  margin-bottom: 40px;
+}
+
+.article p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+</style>
+
+<div class="article">
+  <h1>{{ page.title }}</h1>
+  <div class="meta">{{ page.date | date: "%Y-%m-%d" }}</div>
+
+  {{ content }}
+</div>
