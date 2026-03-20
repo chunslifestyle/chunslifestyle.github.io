@@ -3,10 +3,10 @@ layout: default
 title: 搜尋
 ---
 
-<div style="max-width:700px;margin:60px auto;">
+<div style="max-width:700px;margin:60px auto;font-family:-apple-system;">
   <h1>搜尋文章</h1>
 
-  <input id="searchInput" placeholder="輸入關鍵字..." 
+  <input id="searchInput" placeholder="輸入關鍵字..."
     style="width:100%;padding:12px;margin-top:20px;border:1px solid #ddd;border-radius:8px;">
 
   <ul id="results" style="margin-top:30px;"></ul>
@@ -16,7 +16,7 @@ title: 搜尋
 const posts = [
   {% for post in site.posts %}
     {
-      title: "{{ post.title }}",
+      title: {{ post.title | jsonify }},
       url: "{{ post.url }}"
     },
   {% endfor %}
