@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<h1>標籤：{{ page.tag }}</h1>
+
+{% assign tag_posts = site.tags[page.tag] %}
+{% for post in tag_posts %}
+<div class="post-item">
+  <a class="article-link" href="{{ post.url }}">{{ post.title }}</a>
+  <div class="post-date">{{ post.date | date: "%Y-%m-%d" }}</div>
+</div>
+{% endfor %}
