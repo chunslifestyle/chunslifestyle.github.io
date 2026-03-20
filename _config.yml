@@ -1,29 +1,16 @@
 title: 淳粹生活
-description: 邁入知天命的人生新境
 baseurl: ""
 url: "https://chunslifestyle.github.io"
-
-# 使用 Jekyll
 theme: minima
-
-# 分類與標籤自動生成
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-paginate
   - jekyll-archives
-
-# 分類與標籤設定
 jekyll-archives:
   enabled:
     - categories
     - tags
   layouts:
-    category: archive
-    tag: archive
+    category: default
+    tag: default
   permalinks:
     category: /categories/:name/
     tag: /tags/:name/
-
-paginate: 5
-paginate_path: "/page:num"
