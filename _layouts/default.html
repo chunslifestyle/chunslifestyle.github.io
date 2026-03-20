@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <style>
+    body { font-family:-apple-system; margin:0; padding:0; background:#fff; color:#333; }
+    .nav { display:flex; justify-content:space-between; padding:15px 30px; border-bottom:1px solid #eee; }
+    .nav a { margin-left:20px; text-decoration:none; color:#333; }
+    .container { max-width:700px; margin:50px auto; padding:0 15px; }
+    a.article-link { text-decoration:none; color:#007acc; font-weight:bold; display:block; margin:15px 0; }
+    .tags a { margin-right:10px; text-decoration:none; color:#555; font-size:0.9em; }
+  </style>
+</head>
+<body>
+
+<div class="nav">
+  <div><a href="/">Chun</a></div>
+  <div>
+    <a href="/">首頁</a>
+    <a href="/about.html">關於我</a>
+    <a href="/search.html">搜尋</a>
+  </div>
+</div>
+
+<div class="container">
+  {{ content }}
+</div>
+
+</body>
+</html>
