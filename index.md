@@ -1,33 +1,36 @@
 ---
 layout: default
-title: 淳粹生活 Chunslifestyle
+title: Chun｜Portfolio & Blog
 ---
 
 <style>
-.container {
-  max-width: 900px;
-  margin: 60px auto;
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
 }
 
-.header {
-  margin-bottom: 50px;
+.container {
+  max-width: 900px;
+  margin: 60px auto;
 }
 
-.title {
-  font-size: 42px;
+.hero {
+  margin-bottom: 60px;
+}
+
+.name {
+  font-size: 48px;
   font-weight: 700;
 }
 
-.subtitle {
-  color: #777;
+.bio {
+  color: #666;
   margin-top: 10px;
+  font-size: 18px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .card {
@@ -36,56 +39,57 @@ title: 淳粹生活 Chunslifestyle
   text-decoration: none;
   color: black;
   border-bottom: 1px solid #eee;
-  padding-bottom: 20px;
+  padding: 20px 0;
   transition: 0.2s;
 }
 
 .card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
 .card img {
   width: 160px;
   height: 100px;
   object-fit: cover;
-  border-radius: 8px;
-}
-
-.card-content {
-  flex: 1;
+  border-radius: 10px;
 }
 
 .card-title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .card-date {
   color: #999;
-  margin-top: 8px;
   font-size: 14px;
+  margin-top: 6px;
 }
 </style>
 
 <div class="container">
-  <div class="header">
-    <div class="title">淳粹生活</div>
-    <div class="subtitle">分享生活、想法與靈感</div>
+
+  <!-- 個人介紹 -->
+  <div class="hero">
+    <div class="name">Chun</div>
+    <div class="bio">
+      分享生活、想法與創作 ✨<br>
+      Developer / Creator / Thinker
+    </div>
   </div>
 
-  <div class="grid">
-    {% for post in site.posts %}
-    <a class="card" href="{{ post.url }}">
-      {% if post.image %}
-        <img src="{{ post.image }}">
-      {% endif %}
-      <div class="card-content">
-        <div class="card-title">{{ post.title }}</div>
-        <div class="card-date">{{ post.date | date: "%Y-%m-%d" }}</div>
-      </div>
-    </a>
-    {% endfor %}
-  </div>
-</div>
+  <!-- 部落格 -->
+  <div class="section-title">最新文章</div>
+
+  {% for post in site.posts %}
+  <a class="card" href="{{ post.url }}">
+    {% if post.image %}
+      <img src="{{ post.image }}">
+    {% endif %}
+    <div>
+      <div class="card-title">{{ post.title }}</div>
+      <div class="card-date">{{ post.date | date: "%Y-%m-%d" }}</div>
+    </div>
+  </a>
   {% endfor %}
+
 </div>
