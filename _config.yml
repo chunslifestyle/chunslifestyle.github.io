@@ -2,3 +2,12 @@ title: Chun｜Portfolio & Blog
 description: 分享生活、想法與創作
 baseurl: ""
 url: "https://chunslifestyle.github.io"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-tagging
+
+paginate: 5
+paginate_path: "/page:num"
+
+tag_dir: "tags"
