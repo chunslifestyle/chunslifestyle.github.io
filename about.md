@@ -13,5 +13,5 @@ permalink: /about.html
 
 <p>This blog mainly serves as a collection of things that interest me—such as religion, philosophy, travel, and the many fascinating moments of everyday life—preserved primarily through written reflections.</p>
 
-<h2>聯絡方式</h2>
+<h2>Connect 聯絡方式</h2>
 <p>Email: mouchunwei@gmail.com</p>
