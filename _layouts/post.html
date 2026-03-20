@@ -42,3 +42,10 @@ layout: default
   {{ content }}
 
 </div>
+
+<div class="meta">
+  {{ page.date | date: "%Y-%m-%d" }} · 
+  {% for cat in page.categories %}
+    #{{ cat }}
+  {% endfor %}
+</div>
