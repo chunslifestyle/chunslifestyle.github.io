@@ -7,3 +7,35 @@ tags: [隨筆]
 ---
 
 這是我的新文章內容 ✨
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第一篇文章</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="nav">
+  <div><a href="../index.html">Chun</a></div>
+  <div class="nav-links">
+    <a href="../index.html">首頁</a>
+    <a href="../about.html">關於</a>
+    <a href="../categories/index.html">分類</a>
+    <a href="../tags/index.html">標籤</a>
+    <a href="../archives.html">彙整</a>
+    <a href="../new-post.html" style="padding:6px 10px;background:#fff;color:#000;border:none;border-radius:4px;">發布</a>
+  </div>
+</div>
+
+<div class="container">
+<h1>第一篇文章</h1>
+<p>這是我的第一篇文章 ✨</p>
+<p>你可以在這裡寫生活日記、想法或作品集內容。</p>
+<!-- 圖片範例 -->
+<img src="https://example.com/sample.jpg" alt="範例圖片" style="max-width:100%;">
+</div>
+
+</body>
+</html>
