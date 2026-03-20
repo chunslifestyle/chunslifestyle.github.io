@@ -2,98 +2,28 @@
 layout: default
 title: Chun｜Portfolio & Blog
 ---
-<div style="margin-bottom:30px;">
-  <a href="/">首頁</a> |
-  <a href="/about">關於我</a> |
-  <a href="/search">搜尋</a>
-</div>
-<style>
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
-}
 
-.container {
-  max-width: 900px;
-  margin: 60px auto;
-}
+<div style="max-width:900px;margin:60px auto;font-family:-apple-system,system-ui;">
 
-.hero {
-  margin-bottom: 60px;
-}
+  <h1 style="font-size:48px;margin-bottom:10px;">Chun</h1>
+  <p style="color:#666;font-size:18px;">
+    分享生活、想法與創作 ✨<br>
+    Developer / Creator / Thinker
+  </p>
 
-.name {
-  font-size: 48px;
-  font-weight: 700;
-}
-
-.bio {
-  color: #666;
-  margin-top: 10px;
-  font-size: 18px;
-}
-
-.section-title {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.card {
-  display: flex;
-  gap: 20px;
-  text-decoration: none;
-  color: black;
-  border-bottom: 1px solid #eee;
-  padding: 20px 0;
-  transition: 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-
-.card img {
-  width: 160px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.card-title {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.card-date {
-  color: #999;
-  font-size: 14px;
-  margin-top: 6px;
-}
-</style>
-
-<div class="container">
-
-  <!-- 個人介紹 -->
-  <div class="hero">
-    <div class="name">Chun</div>
-    <div class="bio">
-      分享生活、想法與創作 ✨<br>
-      Developer / Creator / Thinker
-    </div>
-  </div>
-
-  <!-- 部落格 -->
-  <div class="section-title">最新文章</div>
+  <h2 style="margin-top:50px;">最新文章</h2>
 
   {% for post in site.posts %}
-  <a class="card" href="{{ post.url }}">
-    {% if post.image %}
-      <img src="{{ post.image }}">
-    {% endif %}
-    <div>
-      <div class="card-title">{{ post.title }}</div>
-      <div class="card-date">{{ post.date | date: "%Y-%m-%d" }}</div>
+    <div style="margin:20px 0;border-bottom:1px solid #eee;padding-bottom:15px;">
+      <a href="{{ post.url }}" style="text-decoration:none;color:black;">
+        <div style="font-size:22px;font-weight:600;">
+          {{ post.title }}
+        </div>
+      </a>
+      <div style="color:#999;font-size:14px;">
+        {{ post.date | date: "%Y-%m-%d" }}
+      </div>
     </div>
-  </a>
   {% endfor %}
 
 </div>
