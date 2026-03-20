@@ -1,17 +1,24 @@
 ---
 layout: default
-title: About
+title: 關於我
 ---
 
-# 關於我
+<div style="max-width:700px;margin:60px auto;font-family:-apple-system;">
+  <h1>關於我</h1>
 
-我是 Chun 👋  
-這裡分享我的生活、學習與創作。
+  <p>你好，我是 Chun 👋</p>
 
-## 技能
-- HTML / CSS
-- GitHub Pages
-- 寫作 ✍️
+  <p>
+    這個網站用來分享我的生活、想法與創作。
+  </p>
 
-## 聯絡
-- Email: mouchunwei@gmail.com
+  <h2>技能</h2>
+  <ul>
+    <li>HTML / CSS</li>
+    <li>GitHub Pages</li>
+    <li>寫作 ✍️</li>
+  </ul>
+
+  <h2>聯絡我</h2>
+  <p>Email: your@email.com</p>
+</div>
