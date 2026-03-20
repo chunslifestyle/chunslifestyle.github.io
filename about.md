@@ -4,7 +4,7 @@ title: 關於我
 permalink: /about.html
 ---
 
-<h1>關於我</h1>
+<h1>About Me 關於我</h1>
 
 <p>I am chun, living Taipei and graduate of the Department of Philosophy at Chinese Culture University. I work in the public sector and have been a long-time blogger since the era of Wretch.cc (the early Taiwanese blogging platform).
 </p>
