@@ -3,9 +3,14 @@ layout: default
 title: 搜尋
 ---
 
-<input id="searchInput" placeholder="搜尋文章..." style="width:100%;padding:10px">
+<div style="max-width:700px;margin:60px auto;">
+  <h1>搜尋文章</h1>
 
-<ul id="results"></ul>
+  <input id="searchInput" placeholder="輸入關鍵字..." 
+    style="width:100%;padding:12px;margin-top:20px;border:1px solid #ddd;border-radius:8px;">
+
+  <ul id="results" style="margin-top:30px;"></ul>
+</div>
 
 <script>
 const posts = [
@@ -19,7 +24,10 @@ const posts = [
 
 document.getElementById('searchInput').addEventListener('input', function() {
   const keyword = this.value.toLowerCase();
-  const results = posts.filter(p => p.title.toLowerCase().includes(keyword));
+
+  const results = posts.filter(p =>
+    p.title.toLowerCase().includes(keyword)
+  );
 
   document.getElementById('results').innerHTML =
     results.map(p => `<li><a href="${p.url}">${p.title}</a></li>`).join('');
