@@ -1,13 +1,12 @@
+---
+layout: default
+title: Chun｜Portfolio & Blog
+---
 <div style="margin-bottom:30px;">
   <a href="/">首頁</a> |
   <a href="/about">關於我</a> |
   <a href="/search">搜尋</a>
 </div>
----
-layout: default
-title: Chun｜Portfolio & Blog
----
-
 <style>
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
