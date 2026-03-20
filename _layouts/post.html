@@ -12,27 +12,26 @@ layout: default
 
 .cover {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-bottom: 30px;
 }
 
 .article h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
+  font-size: 40px;
 }
 
 .meta {
   color: #888;
-  margin-bottom: 40px;
+  margin: 10px 0 40px;
 }
 
 .article p {
   font-size: 18px;
-  margin-bottom: 20px;
 }
 </style>
 
 <div class="article">
+
   {% if page.image %}
     <img class="cover" src="{{ page.image }}">
   {% endif %}
@@ -41,4 +40,5 @@ layout: default
   <div class="meta">{{ page.date | date: "%Y-%m-%d" }}</div>
 
   {{ content }}
+
 </div>
