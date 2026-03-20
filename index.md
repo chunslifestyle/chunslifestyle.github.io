@@ -12,7 +12,7 @@ title: 首頁
   {% if post.tags %}
   <div class="tags">
     {% for tag in post.tags %}
-      <a href="/tags/{{ tag | slugify }}.html">#{{ tag }}</a>
+      <a href="/tags/{{ tag | slugify }}/">#{{ tag }}</a>
     {% endfor %}
   </div>
   {% endif %}
