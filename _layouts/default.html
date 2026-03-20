@@ -6,53 +6,33 @@
 <title>{{ page.title }}</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
 <style>
-body, h1, h2, h3, h4, h5, h6, p, a, li {
-  font-family: 'Noto Serif TC', "PMingLiU", "MingLiU", "Microsoft JhengHei", "PingFang TC", "Heiti TC", sans-serif;
-  margin:0;padding:0;color:#333;line-height:1.6;
-}
-.nav {
-  display:flex;justify-content:space-between;align-items:center;padding:15px 20px;border-bottom:1px solid #eee;position:sticky;top:0;background:#fff;z-index:100;
-}
-.nav a { margin-left:15px;text-decoration:none;color:#333; }
-.nav-toggle { display:none;font-size:1.5em;cursor:pointer; }
-.nav-links { display:flex;align-items:center; }
-.container { max-width:700px;margin:40px auto;padding:0 15px; }
-.post-item { margin-bottom:25px;padding-bottom:15px;border-bottom:1px solid #eee; }
-a.article-link { text-decoration:none;color:#007acc;font-weight:bold;display:block;margin:5px 0;word-break:break-word; }
-.post-date { font-size:0.85em;color:#999; }
-.tags a { margin-right:8px;text-decoration:none;color:#555;font-size:0.85em; }
-@media (max-width:768px) {
-  .nav-links { display:none;flex-direction:column;background:#fff;position:absolute;top:60px;right:0;width:200px;border:1px solid #eee;box-shadow:0 2px 5px rgba(0,0,0,0.1); }
-  .nav-links a { margin:10px 0;padding:10px 20px; }
-  .nav-toggle { display:block; }
-}
+body,h1,h2,h3,p,a,li{font-family:'Noto Serif TC',"PMingLiU","MingLiU","Microsoft JhengHei",sans-serif;margin:0;padding:0;color:#333;line-height:1.6;}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;border-bottom:1px solid #eee;position:sticky;top:0;background:#fff;z-index:100;}
+.nav a{margin-left:15px;text-decoration:none;color:#333;}
+.nav-toggle{display:none;font-size:1.5em;cursor:pointer;}
+.nav-links{display:flex;align-items:center;}
+.container{max-width:700px;margin:40px auto;padding:0 15px;}
+.post-item{margin-bottom:25px;padding-bottom:15px;border-bottom:1px solid #eee;}
+a.article-link{display:block;margin:5px 0;text-decoration:none;color:#007acc;font-weight:bold;word-break:break-word;}
+.post-date{font-size:0.85em;color:#999;}
+.tags a{margin-right:8px;text-decoration:none;color:#555;font-size:0.85em;}
+@media(max-width:768px){.nav-links{display:none;flex-direction:column;background:#fff;position:absolute;top:60px;right:0;width:200px;border:1px solid #eee;box-shadow:0 2px 5px rgba(0,0,0,.1);}.nav-links a{margin:10px 0;padding:10px 20px;}.nav-toggle{display:block;}}
 </style>
 </head>
 <body>
-
-<!-- 導覽列 -->
 <div class="nav">
   <div><a href="/">Chun</a></div>
   <div class="nav-toggle" onclick="toggleNav()">☰</div>
   <div class="nav-links">
     <a href="/">首頁</a>
     <a href="/about.html">關於我</a>
-    <a href="/search.html">搜尋</a>
     <a href="/categories/">分類</a>
     <a href="/tags/">標籤</a>
-    <a href="/archive/">彙整</a>
   </div>
 </div>
-
-<div class="container">
-  {{ content }}
-</div>
-
+<div class="container">{{ content }}</div>
 <script>
-function toggleNav() {
-  const links = document.querySelector('.nav-links');
-  links.style.display = (links.style.display === 'flex') ? 'none' : 'flex';
-}
+function toggleNav(){const l=document.querySelector('.nav-links');l.style.display=(l.style.display==='flex')?'none':'flex';}
 </script>
 </body>
 </html>
