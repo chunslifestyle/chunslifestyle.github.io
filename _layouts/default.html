@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+      background: #fff;
+    }
+
+    /* 導覽列 */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: white;
+      border-bottom: 1px solid #eee;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .nav-left a {
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      color: black;
+    }
+
+    .nav-right a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #555;
+      font-size: 15px;
+    }
+
+    .nav-right a:hover {
+      color: black;
+    }
+
+    /* 內容區 */
+    .content {
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 導覽列 -->
+  <div class="navbar">
+    <div class="nav-left">
+      <a href="/">Chun</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="/">首頁</a>
+      <a href="/about">關於我</a>
+      <a href="/search">搜尋</a>
+    </div>
+  </div>
+
+  <!-- 內容 -->
+  <div class="content">
+    {{ content }}
+  </div>
+
+</body>
+</html>
