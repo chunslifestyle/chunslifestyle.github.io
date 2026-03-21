@@ -1,9 +1,15 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>淳文字</title>
+
+    <!-- 引入 Google Fonts：Noto Sans TC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         /* 全站字型與背景 */
         body {
@@ -93,6 +99,7 @@
     </style>
 </head>
 <body>
+
 <script>
   // 自動生成最新文章列表
   document.addEventListener("DOMContentLoaded", function() {
@@ -100,7 +107,6 @@
       { title: "文章標題 1", url: "2026-03-21.html" },
       { title: "文章標題 2", url: "2026-03-22.html" },
       { title: "文章標題 3", url: "new-post.html" }
-      // 可繼續增加文章
     ];
 
     const ul = document.querySelector("section.latest-articles ul");
@@ -116,31 +122,32 @@
     });
   });
 </script>
-    <!-- 導覽列 -->
-    <nav>
-        <ul>
-            <li><a href="index.html">首頁</a></li>
-            <li><a href="categories.html">分類</a></li>
-            <li><a href="archives.html">彙整</a></li>
-            <li><a href="about.html">關於</a></li>
-        </ul>
-    </nav>
 
-    <!-- 標題 -->
-    <header>
-        <h1>淳文字</h1>
-        <h2>邁入知天命的人生新境</h2>
-    </header>
+<!-- 導覽列 -->
+<nav>
+    <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="categories.html">分類</a></li>
+        <li><a href="archives.html">彙整</a></li>
+        <li><a href="about.html">關於</a></li>
+    </ul>
+</nav>
 
-    <!-- 最新文章 -->
-    <section class="latest-articles">
-        <h3>最新文章</h3>
-        <ul>
-            <li><a href="#">文章標題 1</a></li>
-            <li><a href="#">文章標題 2</a></li>
-            <li><a href="#">文章標題 3</a></li>
-        </ul>
-    </section>
+<!-- 標題 -->
+<header>
+    <h1>淳文字</h1>
+    <h2>邁入知天命的人生新境</h2>
+</header>
+
+<!-- 最新文章 -->
+<section class="latest-articles">
+    <h3>最新文章</h3>
+    <ul>
+        <li><a href="#">文章標題 1</a></li>
+        <li><a href="#">文章標題 2</a></li>
+        <li><a href="#">文章標題 3</a></li>
+    </ul>
+</section>
 
 </body>
 </html>
