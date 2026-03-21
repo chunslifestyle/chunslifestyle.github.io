@@ -1,89 +1,121 @@
 <!DOCTYPE html>
-<html lang="ja">
+
+<html>
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Mono文藝記事部落格</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Noto Serif JP', serif; background:#FAFAFA; color:#222; line-height:1.6; }
-a { text-decoration:none; color:inherit; }
 
-/* Header */
-header { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:#FFF; border-bottom:1px solid #DDD; position:sticky; top:0; z-index:100; }
-header .logo { font-family:'Sawarabi Mincho', serif; font-size:1.7rem; font-weight:bold; }
-nav a { margin-left:1.5rem; font-weight:500; transition:color 0.3s; }
-nav a:hover { color:#555; }
+<link rel="stylesheet" href="style.css">
 
-/* Hero */
-.hero { text-align:center; padding:3rem 1rem; }
-.hero h1 { font-family:'Sawarabi Mincho', serif; font-size:2.8rem; font-weight:700; margin-bottom:0.5rem; }
-.hero p { font-size:1.2rem; color:#555; }
-
-/* Blog Feed */
-.blog-feed { padding:2rem; max-width:800px; margin:0 auto; }
-.blog-feed h2 { font-family:'Sawarabi Mincho', serif; font-size:2rem; margin-bottom:1.5rem; text-align:center; }
-.blog-post { padding:1rem 0; border-bottom:1px solid #DDD; }
-.blog-post:last-child { border-bottom:none; }
-.blog-post h3 { font-family:'Sawarabi Mincho', serif; font-size:1.3rem; margin-bottom:0.3rem; }
-.blog-post p { font-size:0.95rem; color:#555; margin-bottom:0.3rem; }
-.blog-post .date { font-size:0.8rem; color:#999; }
-
-/* Footer */
-footer { text-align:center; padding:2rem 1rem; margin-top:2rem; border-top:1px solid #DDD; color:#222; font-size:0.9rem; }
-footer a { color:#555; margin:0 0.5rem; transition:color 0.3s; }
-footer a:hover { color:#222; }
-
-/* Responsive */
-@media(max-width:768px){
-  .hero h1 { font-size:2rem; }
-  .hero p { font-size:1rem; }
-}
-</style>
 </head>
+
 <body>
 
-<header>
-  <div class="logo">Mono文藝記事</div>
-  <nav>
-    <a href="index.html">首頁</a>
-    <a href="categories.html">分類</a> 
-    <a href="archives.html">彙整</a>
-  </nav>
-</header>
+<div class="container">
 
-<section class="hero">
-  <h1>Mono文藝記事部落格</h1>
-  <p>簡約、單色的文字記事部落格，專注內容與留白感</p>
-</section>
+<div class="navbar">
 
-<section class="blog-feed">
-  <h2>最新文章</h2>
-  
-  <div class="blog-post">
-    <h3>2026-03-21：今天學到的新知</h3>
-    <p>記錄今天學到的程式技巧，以及思考過程與心得。</p>
-    <span class="date">2026-03-21</span>
-  </div>
+<a href="index.html">首頁</a>
 
-  <div class="blog-post">
-    <h3>2026-03-20：每日記事</h3>
-    <p>今天整理了工作流程，完成了一些待辦事項。</p>
-    <span class="date">2026-03-20</span>
-  </div>
+<a href="categories.html">分類</a>
 
-  <div class="blog-post">
-    <h3>2026-03-19：靜心筆記</h3>
-    <p>分享一些閱讀心得與生活反思，保持日常簡單與沉澱。</p>
-    <span class="date">2026-03-19</span>
-  </div>
+<a href="archives.html">彙整</a>
 
-</section>
+</div>
 
-<footer>
-  &copy; 2026 Mono文藝記事部落格 | <a href="about.html">關於</a> | <a href="mailto:mouchunwei@gmail.com">聯絡</a>
-</footer>
+<h1 class="site-title">
+Mono文藝記事部落格
+</h1>
+
+<p>
+簡約、單色的文字記事部落格，
+專注內容與留白感
+</p>
+
+<h2>
+最新文章
+</h2>
+
+<div id="post-list">
+
+載入中...
+
+</div>
+
+</div>
+
+<script>
+
+const username = "chunslifestyle";
+const repo = "chunslifestyle.github.io";
+
+const apiUrl =
+`https://api.github.com/repos/${username}/${repo}/contents/`;
+
+fetch(apiUrl)
+.then(response => response.json())
+.then(files => {
+
+const list =
+document.getElementById("post-list");
+
+let posts = files
+.filter(file =>
+file.name.match(/^\\d{4}-\\d{2}-\\d{2}\\.html$/)
+);
+
+// 新到舊排序
+posts.sort((a, b) =>
+b.name.localeCompare(a.name)
+);
+
+// 只顯示最新 10 篇
+posts = posts.slice(0, 10);
+
+list.innerHTML = "";
+
+posts.forEach(post => {
+
+let date =
+post.name.replace(".html", "");
+
+let item =
+document.createElement("div");
+
+item.className = "post-list";
+
+item.innerHTML = `
+
+<div class="post-title">
+
+<a href="${post.name}">
+${date}
+</a>
+
+</div>
+
+<div class="post-date">
+${date}
+</div>
+
+`;
+
+list.appendChild(item);
+
+});
+
+})
+.catch(error => {
+
+document.getElementById("post-list")
+.innerHTML =
+"無法載入文章列表";
+
+});
+
+</script>
 
 </body>
 </html>
