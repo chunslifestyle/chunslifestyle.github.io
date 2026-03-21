@@ -1,6 +1,8 @@
 body,h1,h2,h3,p,a,li {
   body {
-  font-family: "Noto Serif TC", "PMingLiU", "新細明體", serif;
+  font-family: "Noto Serif TC", "PMingLiU", serif;
+  line-height: 1.8;
+  letter-spacing: 0.05em
 }
 
 .nav {
