@@ -7,21 +7,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Noto Sans JP', sans-serif; background:#FAFAFA; color:#222; line-height:1.6; }
+body { font-family:'Noto Sans JP',sans-serif; background:#FAFAFA; color:#222; line-height:1.6; }
 a { text-decoration:none; color:inherit; }
-
-/* Header */
-header { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:#FFFFFF; border-bottom:1px solid #DDD; position:sticky; top:0; z-index:100; }
+header { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:#FFF; border-bottom:1px solid #DDD; position:sticky; top:0; }
 header .logo { font-size:1.5rem; font-weight:bold; }
 nav a { margin-left:1.5rem; font-weight:500; transition:color 0.3s; }
 nav a:hover { color:#555; }
-
-/* Hero */
 .hero { text-align:center; padding:3rem 1rem; }
 .hero h1 { font-size:2.5rem; font-weight:700; margin-bottom:0.5rem; }
 .hero p { font-size:1.2rem; color:#555; }
-
-/* Blog Feed */
 .blog-feed { padding:2rem; max-width:800px; margin:0 auto; }
 .blog-feed h2 { font-size:2rem; margin-bottom:1.5rem; text-align:center; }
 .blog-post { padding:1rem 0; border-bottom:1px solid #DDD; }
@@ -29,13 +23,9 @@ nav a:hover { color:#555; }
 .blog-post h3 { font-size:1.2rem; margin-bottom:0.3rem; }
 .blog-post p { color:#555; font-size:0.95rem; margin-bottom:0.3rem; }
 .blog-post .date { font-size:0.8rem; color:#999; }
-
-/* Footer */
 footer { text-align:center; padding:2rem 1rem; margin-top:2rem; border-top:1px solid #DDD; color:#222; font-size:0.9rem; }
 footer a { color:#555; margin:0 0.5rem; transition:color 0.3s; }
 footer a:hover { color:#222; }
-
-/* Responsive */
 @media(max-width:768px){
   .hero h1 { font-size:2rem; }
   .hero p { font-size:1rem; }
@@ -43,46 +33,37 @@ footer a:hover { color:#222; }
 </style>
 </head>
 <body>
-
 <header>
   <div class="logo">Mono記事部落格</div>
   <nav>
-    <a href="#">首頁</a>
-    <a href="#">分類</a>
-    <a href="#">彙整</a>
-    <a href="#">關於</a>
-    <a href="#">新增文章</a>
+    <a href="index.html">首頁</a>
+    <a href="categories.html">分類</a>
+    <a href="archives.html">彙整</a>
+    <a href="about.html">關於</a>
+    <a href="new-post.html">新增文章</a>
   </nav>
 </header>
-
 <section class="hero">
   <h1>Mono記事部落格</h1>
-  <p>簡約、單色的文字記事部落格，專注內容與留白感</p>
+  <p>簡約、單色文字記事部落格，專注內容與留白感</p>
 </section>
-
 <section class="blog-feed">
   <h2>最新文章</h2>
-  
   <div class="blog-post">
     <h3>2026-03-21：今天學到的新知</h3>
     <p>記錄今天學到的程式技巧，以及思考過程與心得。</p>
   </div>
-  
   <div class="blog-post">
     <h3>2026-03-20：每日記事</h3>
     <p>今天整理了工作流程，完成了一些待辦事項。</p>
   </div>
-  
   <div class="blog-post">
     <h3>2026-03-19：靜心筆記</h3>
     <p>分享一些閱讀心得與生活反思，保持日常簡單與沉澱。</p>
   </div>
-
 </section>
-
 <footer>
-  &copy; 2026 Mono記事部落格 | <a href="#">關於</a> | <a href="#">聯絡</a>
+  &copy; 2026 Mono記事部落格 | <a href="about.html">關於</a> | <a href="#">聯絡</a>
 </footer>
-
 </body>
 </html>
