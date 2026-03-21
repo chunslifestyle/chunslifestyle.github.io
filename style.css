@@ -1,124 +1,117 @@
-/* 🌿 全站字體與基礎設定 */
+/* 🌿 基礎（日系：乾淨＋柔和） */
 body {
-  font-family: "Noto Serif TC", "PMingLiU", serif;
-  line-height: 1.9;
-  letter-spacing: 0.05em;
-  color: #333;
-  background-color: #fafafa;
+  font-family: "Noto Serif TC", "Hiragino Mincho ProN", "PMingLiU", serif;
+  background-color: #f7f6f2;
+  color: #2f2f2f;
+  line-height: 2;
+  letter-spacing: 0.06em;
   margin: 0;
 }
 
-/* 📖 內容區塊（閱讀體驗核心） */
+/* 📖 主內容（重點：留白） */
 .container {
-  max-width: 720px;
-  margin: 60px auto;
-  padding: 0 20px;
+  max-width: 680px;
+  margin: 80px auto;
+  padding: 0 24px;
 }
 
-/* 📝 標題 */
+/* 📝 標題（日系偏細） */
 h1, h2, h3 {
-  font-weight: 600;
-  line-height: 1.4;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
 }
 
-/* 📄 段落 */
+/* 📄 段落（呼吸感） */
 p {
-  margin: 1em 0;
+  margin: 1.4em 0;
 }
 
-/* 🔗 連結 */
+/* 🔗 連結（低調） */
 a {
-  color: #3a6ea5;
+  color: #6b7a8f;
   text-decoration: none;
-  transition: 0.2s;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
 }
 a:hover {
-  color: #1d3557;
-  text-decoration: underline;
+  color: #000;
+  border-bottom: 1px solid #000;
 }
 
-/* 📚 文章列表 */
+/* 📚 文章列表（很輕） */
 .post-item {
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-/* 📰 文章標題連結 */
+/* 📰 標題 */
 a.article-link {
-  display: block;
-  margin: 8px 0;
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 1.15em;
+  font-weight: 500;
+  margin: 10px 0;
 }
 
-/* 📅 日期 */
+/* 📅 日期（淡） */
 .post-date {
-  font-size: 0.85em;
-  color: #999;
+  font-size: 0.8em;
+  color: #aaa;
 }
 
 /* 🏷️ 標籤 */
 .tags a {
-  margin-right: 10px;
-  font-size: 0.8em;
-  color: #777;
+  font-size: 0.75em;
+  color: #999;
+  border: none;
 }
 
-/* 🧭 導覽列 */
+/* 🧭 導覽列（日系：極簡） */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  border-bottom: 1px solid #eee;
-  background: rgba(255,255,255,0.9);
-  backdrop-filter: blur(6px);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  padding: 20px 24px;
+  background: transparent;
+  border-bottom: none;
 }
 
 /* 導覽連結 */
 .nav a {
-  margin-left: 15px;
-  color: #333;
+  margin-left: 20px;
+  color: #555;
+  border: none;
 }
 
-/* ☰ 手機選單 */
+/* ☰ 手機 */
 .nav-toggle {
   display: none;
-  font-size: 1.5em;
-  cursor: pointer;
+  font-size: 1.4em;
 }
 
 .nav-links {
   display: flex;
-  align-items: center;
 }
 
-/* 📱 RWD */
+/* 📱 手機版（日系：更留白） */
 @media (max-width: 768px) {
   .container {
-    margin: 40px auto;
+    margin: 50px auto;
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
-    background: #fff;
+    background: #f7f6f2;
     position: absolute;
     top: 60px;
     right: 0;
-    width: 200px;
-    border: 1px solid #eee;
-    box-shadow: 0 4px 10px rgba(0,0,0,.08);
+    width: 180px;
+    padding: 10px 0;
   }
 
   .nav-links a {
-    margin: 10px 0;
     padding: 10px 20px;
   }
 
