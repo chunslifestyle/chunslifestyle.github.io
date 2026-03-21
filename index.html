@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>さくら日系部落格</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+<style>
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Noto Sans JP', sans-serif; background: #FFF8E7; color:#333; line-height:1.6; }
+a { text-decoration:none; color:inherit; }
+
+/* Header */
+header { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:#FDEFF4; position:sticky; top:0; z-index:100; }
+header .logo { font-size:1.5rem; font-weight:bold; color:#D96F8B; }
+nav a { margin-left:1.5rem; font-weight:500; transition:color 0.3s; }
+nav a:hover { color:#B04563; }
+
+/* Hero Banner */
+.hero { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; height:60vh; background:url('https://images.unsplash.com/photo-1552089123-5e7d62aa4c79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') no-repeat center/cover; color:#fff; padding:0 1rem; }
+.hero h1 { font-size:3rem; font-weight:700; margin-bottom:1rem; text-shadow:1px 1px 6px rgba(0,0,0,0.4);}
+.hero p { font-size:1.2rem; max-width:600px; text-shadow:1px 1px 4px rgba(0,0,0,0.3); }
+
+/* Blog Feed */
+.blog-feed { padding:4rem 2rem; max-width:1200px; margin:0 auto; }
+.blog-feed h2 { text-align:center; font-size:2rem; margin-bottom:2rem; color:#D96F8B; }
+.blog-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:2rem; }
+.blog-card { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+.blog-card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.15);}
+.blog-card img { width:100%; height:200px; object-fit:cover; }
+.card-content { padding:1rem; }
+.card-content h3 { font-size:1.2rem; margin-bottom:0.5rem; color:#D96F8B; }
+.card-content p { font-size:0.95rem; color:#666; margin-bottom:0.5rem; }
+.card-content .date { font-size:0.8rem; color:#999; }
+
+/* Footer */
+footer { background:#FDEFF4; text-align:center; padding:2rem 1rem; margin-top:2rem; }
+footer p { color:#333; font-size:0.9rem; }
+footer a { color:#D96F8B; margin:0 0.5rem; transition:color 0.3s; }
+footer a:hover { color:#B04563; }
+
+/* Responsive */
+@media(max-width:768px){
+  .hero h1 { font-size:2.2rem; }
+  .hero p { font-size:1rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">さくら部落格</div>
+  <nav>
+    <a href="#">首頁</a>
+    <a href="#">分類</a>
+    <a href="#">彙整</a>
+    <a href="#">關於</a>
+    <a href="#">新增文章</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>日系風格部落格</h1>
+  <p>分享生活、插畫、旅遊與設計靈感的簡約日系部落格</p>
+</section>
+
+<section class="blog-feed">
+  <h2>最新文章</h2>
+  <div class="blog-grid">
+    <div class="blog-card">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=tinysrgb&fit=max&w=600&q=80" alt="文章封面">
+      <div class="card-content">
+        <h3>櫻花季旅行心得</h3>
+        <p>分享我在日本櫻花季的旅行日記，搭配手繪插畫記錄生活點滴。</p>
+        <span class="date">2026-03-21</span>
+      </div>
+    </div>
+    <div class="blog-card">
+      <img src="https://images.unsplash.com/photo-1552089123-5e7d62aa4c79?crop=entropy&cs=tinysrgb&fit=max&w=600&q=80" alt="文章封面">
+      <div class="card-content">
+        <h3>日系簡約插畫教程</h3>
+        <p>教你用簡單工具製作日系手繪風插畫，搭配留白設計美感。</p>
+        <span class="date">2026-03-18</span>
+      </div>
+    </div>
+    <div class="blog-card">
+      <img src="https://images.unsplash.com/photo-1518186233393-0708b19b5683?crop=entropy&cs=tinysrgb&fit=max&w=600&q=80" alt="文章封面">
+      <div class="card-content">
+        <h3>日系咖啡店散策</h3>
+        <p>探訪東京小巷內的咖啡店，感受日系生活的簡約與溫暖。</p>
+        <span class="date">2026-03-15</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 さくら部落格 | <a href="#">Instagram</a> | <a href="#">Twitter</a> | <a href="#">聯絡我們</a></p>
+</footer>
+
+</body>
+</html>
