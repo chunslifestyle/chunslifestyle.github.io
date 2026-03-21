@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彙整 - Mono記事部落格</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Noto Sans JP', sans-serif; background:#FAFAFA; color:#222; line-height:1.6; }
+a { text-decoration:none; color:inherit; }
+header { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:#FFF; border-bottom:1px solid #DDD; position:sticky; top:0; }
+header .logo { font-size:1.5rem; font-weight:bold; }
+nav a { margin-left:1.5rem; font-weight:500; transition:color 0.3s; }
+nav a:hover { color:#555; }
+.section { padding:3rem 2rem; max-width:800px; margin:0 auto; }
+.section h2 { font-size:2rem; margin-bottom:1.5rem; text-align:center; }
+.archive-list { list-style:none; }
+.archive-list li { padding:0.8rem 0; border-bottom:1px solid #DDD; }
+.archive-list li:last-child { border-bottom:none; }
+footer { text-align:center; padding:2rem 1rem; margin-top:2rem; border-top:1px solid #DDD; color:#222; font-size:0.9rem; }
+footer a { color:#555; margin:0 0.5rem; transition:color 0.3s; }
+footer a:hover { color:#222; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Mono記事部落格</div>
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="categories.html">分類</a>
+    <a href="archives.html">彙整</a>
+    <a href="about.html">關於</a>
+    <a href="new-post.html">新增文章</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h2>文章彙整</h2>
+  <ul class="archive-list">
+    <li>2026-03-21：今天學到的新知</li>
+    <li>2026-03-20：每日記事</li>
+    <li>2026-03-19：靜心筆記</li>
+    <li>2026-03-18：程式練習筆記</li>
+    <li>2026-03-17：生活瑣事紀錄</li>
+  </ul>
+</section>
+
+<footer>
+  &copy; 2026 Mono記事部落格 | <a href="about.html">關於</a> | <a href="#">聯絡</a>
+</footer>
+
+</body>
+</html>
