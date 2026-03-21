@@ -1,93 +1,42 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="zh-Hant">
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<meta charset="UTF-8">
-<title>文章彙整</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>彙整 - 淳文字</title>
 
-<link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- 全站 CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
+<nav>
+  <ul>
+    <li><a href="index.html">首頁</a></li>
+    <li><a href="categories.html">分類</a></li>
+    <li><a href="archives.html">彙整</a></li>
+    <li><a href="about.html">關於</a></li>
+  </ul>
+</nav>
 
-<div class="navbar">
-<a href="index.html">首頁</a>
-<a href="categories.html">分類</a>
-<a href="archives.html">彙整</a>
-<a href="about.html">關於</a>
-</div>
+<header>
+  <h1>淳文字</h1>
+  <h2>彙整頁</h2>
+</header>
 
-<h1>文章彙整</h1>
-
-<div id="archives-list">
-載入中...
-</div>
-
-</div>
-
-<script>
-
-// 改成你的 GitHub 使用者名稱與 repo 名稱
-const username = "chunslifestyle";
-const repo = "chunslifestyle.github.io";
-
-const apiUrl =
-`https://api.github.com/repos/${username}/${repo}/contents/`;
-
-fetch(apiUrl)
-.then(response => response.json())
-.then(files => {
-
-const list = document.getElementById("archives-list");
-
-let posts = files
-.filter(file =>
-file.name.match(/^\\d{4}-\\d{2}-\\d{2}\\.html$/)
-);
-
-// 依日期排序（新到舊）
-posts.sort((a, b) =>
-b.name.localeCompare(a.name)
-);
-
-list.innerHTML = "";
-
-posts.forEach(post => {
-
-let date = post.name.replace(".html", "");
-
-let link = document.createElement("p");
-
-link.innerHTML =
-`${date}：<a href="${post.name}">
-${date}
-</a>`;
-
-list.appendChild(link);
-
-});
-
-})
-.catch(error => {
-
-document.getElementById("archives-list")
-.innerHTML = "無法載入文章列表";
-
-});
-
-</script>
+<section class="latest-articles">
+  <h3>所有文章列表</h3>
+  <ul>
+    <li><a href="2026-03-21.html">文章標題 1</a></li>
+    <li><a href="2026-03-22.html">文章標題 2</a></li>
+    <li><a href="new-post.html">文章標題 3</a></li>
+  </ul>
+</section>
 
 </body>
-  <div align=center>
-<footer>
-  &copy; SINCE 2026 淳文字 
-</footer>
-  </div>
 </html>
