@@ -1,10 +1,6 @@
  <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>淳文字</title>
@@ -14,61 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      font-family: "Noto Sans TC", sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fdfdfd;
-      color: #333;
-    }
-    nav {
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
-      padding: 10px 20px;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 20px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav ul li a:hover { color: #007acc; }
-
-    header {
-      text-align: center;
-      padding: 50px 20px 30px 20px;
-    }
-    header h1 { margin: 0; font-size: 2.5em; }
-    header h2 { margin-top: 10px; font-weight: normal; color: #666; }
-
-    section.latest-articles {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    section.latest-articles h3 {
-      border-bottom: 2px solid #007acc;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-    section.latest-articles ul { list-style: none; padding: 0; margin-top: 15px; }
-    section.latest-articles ul li { margin-bottom: 10px; }
-    section.latest-articles ul li a { text-decoration: none; color: #007acc; transition: color 0.3s; }
-    section.latest-articles ul li a:hover { text-decoration: underline; }
-
-    @media (max-width: 600px) {
-      nav ul { flex-direction: column; gap: 10px; }
-      header h1 { font-size: 2em; }
-    }
-  </style>
+  <!-- 全站 CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -89,28 +32,11 @@
 <section class="latest-articles">
   <h3>最新文章</h3>
   <ul>
-    <!-- 文章會由 JS 自動生成 -->
+    <li><a href="2026-03-21.html">文章標題 1</a></li>
+    <li><a href="2026-03-22.html">文章標題 2</a></li>
+    <li><a href="new-post.html">文章標題 3</a></li>
   </ul>
 </section>
-
-<script>
-  // 自動生成最新文章列表
-  const articles = [
-    { title: "文章標題 1", url: "2026-03-21.html" },
-    { title: "文章標題 2", url: "2026-03-22.html" },
-    { title: "文章標題 3", url: "new-post.html" }
-  ];
-
-  const ul = document.querySelector(".latest-articles ul");
-  articles.forEach(article => {
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-    a.href = article.url;
-    a.textContent = article.title;
-    li.appendChild(a);
-    ul.appendChild(li);
-  });
-</script>
 
 </body>
 </html>
