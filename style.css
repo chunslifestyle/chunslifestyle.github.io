@@ -7,7 +7,6 @@ body {
     background-color: #fdfdfd;
 }
 
-/* 導覽列 */
 nav {
     background-color: #fff;
     border-bottom: 1px solid #ddd;
@@ -26,11 +25,8 @@ nav ul li a {
     font-weight: bold;
     transition: color 0.3s;
 }
-nav ul li a:hover {
-    color: #007acc;
-}
+nav ul li a:hover { color: #007acc; }
 
-/* 標題 */
 header {
     text-align: center;
     padding: 50px 20px 30px 20px;
@@ -38,7 +34,6 @@ header {
 header h1 { margin: 0; font-size: 2.5em; }
 header h2 { margin-top: 10px; font-weight: normal; color: #666; }
 
-/* 最新文章 */
 section.latest-articles {
     max-width: 800px;
     margin: 0 auto;
