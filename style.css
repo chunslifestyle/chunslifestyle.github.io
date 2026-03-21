@@ -1,116 +1,18 @@
-/* ===== 不修改字體 ===== */
-
+/* 全站統一字型 */
 body {
-    margin: 0;
-    padding: 0;
-
-    background-color: #ffffff;
-    color: #242424;
-}
-
-/* ===== 中央容器（Medium核心）===== */
-
-.container {
-    max-width: 720px;     /* Medium關鍵 */
-    margin: 0 auto;
-    padding: 48px 20px;
-}
-
-/* ===== 導覽列 ===== */
-
-.navbar {
-    border-bottom: 1px solid #e6e6e6;
-    padding-bottom: 14px;
-    margin-bottom: 48px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #242424;
-    margin-right: 18px;
-}
-
-.navbar a:hover {
-    opacity: 0.6;
-}
-
-/* ===== 網站標題 ===== */
-
-.site-title {
-    font-size: 32px;
-    margin-bottom: 40px;
-}
-
-/* ===== 首頁文章列表 ===== */
-
-.post-list {
-    margin-bottom: 56px;
-}
-
-/* 文章標題 */
-
-.post-title {
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom: 6px;
-}
-
-.post-title a {
-    text-decoration: none;
-    color: #242424;
-}
-
-.post-title a:hover {
-    text-decoration: underline;
-}
-
-/* 摘要 */
-
-.post-excerpt {
-    font-size: 18px;
+    font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
     line-height: 1.6;
-    color: #555;
-
-    margin-bottom: 8px;
+    color: #333; /* 文字顏色可依風格調整 */
 }
 
-/* 日期 */
-
-.post-date {
-    font-size: 14px;
-    color: #757575;
+/* 標題字型稍微加粗或調整大小 */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
 }
 
-/* ===== 文章頁（最重要）===== */
-
-.post-content h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-.post-content p {
-    font-size: 20px;
-
-    line-height: 1.8;   /* Medium靈魂 */
-
-    margin-bottom: 26px;
-}
-
-/* 圖片 */
-
-.post-content img {
-    width: 100%;
-    margin: 36px 0;
-}
-
-/* ===== Footer ===== */
-
-footer {
-    margin-top: 80px;
-    padding-top: 24px;
-
-    border-top: 1px solid #e6e6e6;
-
-    font-size: 14px;
-    color: #757575;
+/* 導航連結 */
+a {
+    font-family: inherit; /* 繼承 body 的字型 */
+    text-decoration: none;
+    color: #333;
 }
