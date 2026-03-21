@@ -1,33 +1,128 @@
-body,h1,h2,h3,p,a,li {
-  body {
-  font-family: "Noto Serif TC", "PMingLiU", serif !important;
+/* 🌿 全站字體與基礎設定 */
+body {
+  font-family: "Noto Serif TC", "PMingLiU", serif;
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+  color: #333;
+  background-color: #fafafa;
+  margin: 0;
 }
 
-.nav {
-  display:flex; justify-content:space-between; align-items:center;
-  padding:15px 20px; border-bottom:1px solid #eee;
-  background:#fff; position:sticky; top:0; z-index:100;
+/* 📖 內容區塊（閱讀體驗核心） */
+.container {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
-.nav a { margin-left:15px; text-decoration:none; color:#333; }
-.nav-toggle { display:none; font-size:1.5em; cursor:pointer; }
-.nav-links { display:flex; align-items:center; }
+/* 📝 標題 */
+h1, h2, h3 {
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
 
-.container { max-width:700px; margin:40px auto; padding:0 15px; }
-.post-item { margin-bottom:25px; padding-bottom:15px; border-bottom:1px solid #eee; }
+/* 📄 段落 */
+p {
+  margin: 1em 0;
+}
+
+/* 🔗 連結 */
+a {
+  color: #3a6ea5;
+  text-decoration: none;
+  transition: 0.2s;
+}
+a:hover {
+  color: #1d3557;
+  text-decoration: underline;
+}
+
+/* 📚 文章列表 */
+.post-item {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* 📰 文章標題連結 */
 a.article-link {
-  display:block; margin:5px 0; text-decoration:none;
-  color:#007acc; font-weight:bold; word-break:break-word;
+  display: block;
+  margin: 8px 0;
+  font-size: 1.2em;
+  font-weight: bold;
 }
-.post-date { font-size:0.85em; color:#999; }
-.tags a { margin-right:8px; text-decoration:none; color:#555; font-size:0.85em; }
 
-@media(max-width:768px){
-  .nav-links {
-    display:none; flex-direction:column; background:#fff;
-    position:absolute; top:60px; right:0; width:200px;
-    border:1px solid #eee; box-shadow:0 2px 5px rgba(0,0,0,.1);
+/* 📅 日期 */
+.post-date {
+  font-size: 0.85em;
+  color: #999;
+}
+
+/* 🏷️ 標籤 */
+.tags a {
+  margin-right: 10px;
+  font-size: 0.8em;
+  color: #777;
+}
+
+/* 🧭 導覽列 */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* 導覽連結 */
+.nav a {
+  margin-left: 15px;
+  color: #333;
+}
+
+/* ☰ 手機選單 */
+.nav-toggle {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* 📱 RWD */
+@media (max-width: 768px) {
+  .container {
+    margin: 40px auto;
   }
-  .nav-links a { margin:10px 0; padding:10px 20px; }
-  .nav-toggle { display:block; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0,0,0,.08);
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    padding: 10px 20px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
 }
